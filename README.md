@@ -6,6 +6,12 @@ Em tempo estarei disponibilizando no Youtube
 
 # requisitos para desenvolver o curso
 
+Clicar logo acima no botão verde "clone or download"
+
+Em seguida "download zip"
+
+Depois você irá descompactar os arquivos em um local de facil acesso, preferência sua área de trabalho.
+
 Instalador do construct 2 que esta na pasta apps
 Pacote de artes que esta na pasta artes
 Projeto inicial que esta na pasta projeto
