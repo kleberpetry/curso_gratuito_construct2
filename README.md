@@ -20,6 +20,7 @@ Em seguida "download zip"
 Depois você irá descompactar os arquivos em um local de facil acesso, preferência sua área de trabalho.
 
 1- Instale o Construct 2, no caso estou utilizando a versão R277, se você utilizar outra versão não será compatível com os arquivos do meu projeto.
+
 2- Siga o passo a passo que estará no vídeo.
 
 Estarei atualizando aqui caso tenha alguma alteração no projeto.
