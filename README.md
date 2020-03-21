@@ -1,5 +1,8 @@
 # Curso de Construct2
-Curso que irá demonstrar a utilização básica da ferramenta Construct 2, os vídeos estão disponíveis no canal do Twitch no seguinte endereço https://www.twitch.tv/kleberpetry
+Curso que irá demonstrar a utilização básica da ferramenta Construct 2, os vídeos estão disponíveis no canal do Twitch no seguinte endereço https://www.twitch.tv/kleberpetry/videos
+
+Em tempo estarei disponibilizando no Youtube
+
 
 # requisitos para desenvolver o curso
 
