@@ -13,9 +13,11 @@ Pacote de artes que esta na pasta artes
 Projeto inicial que esta na pasta projeto
 
 # primeiros passos:
-Clicar logo acima no botão verde "clone or download"
+Aqui nesta página você vai clicar logo acima no botão verde "clone or download"
 
 Em seguida "download zip"
+
+Salve o arquivo em um local de facil acesso, eu recomendo a área de trabalho, talvez seu computador salve direto na pasta downloads
 
 Depois você irá descompactar os arquivos em um local de facil acesso, preferência sua área de trabalho.
 
