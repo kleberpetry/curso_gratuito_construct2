@@ -31,5 +31,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/heroi/" />
         <folder expanded="1" path="animation-folder/base/" />
         <folder expanded="1" path="animation-folder/inimigo/" />
+        <folder expanded="1" path="animation-folder/animation/" />
     </folders-expanded>
 </c2uistate>
