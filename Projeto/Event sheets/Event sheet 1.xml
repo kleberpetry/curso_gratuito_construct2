@@ -2,5 +2,20 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <event-block sid="596357690618010">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="598853593738959" type="heroi">
+                    <param id="0" name="Object">inimigo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="121236383162619" type="heroi" />
+                <action id="-16" name="Wait" sid="621439982323447" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="950366198781201" type="System" />
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
