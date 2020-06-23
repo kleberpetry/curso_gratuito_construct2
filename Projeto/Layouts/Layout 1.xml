@@ -136,8 +136,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>173</x>
-                        <y>381</y>
+                        <x>178</x>
+                        <y>334</y>
                         <z>0</z>
                         <width>66</width>
                         <height>92</height>
@@ -229,6 +229,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="coracao" uid="9">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>3</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>147</x>
+                        <y>77</y>
+                        <z>0</z>
+                        <width>163</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503067493</hotspotX>
+                        <hotspotY>0.51111114</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
