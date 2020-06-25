@@ -16,6 +16,8 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -62,7 +64,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="763984614506530" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.476" hotspotY="0.996" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -80,29 +82,32 @@
                 <behavior-type name="Pin" sid="193395300645070">
                     <behavior id="Pin" />
                 </behavior-type>
+                <behavior-type name="Flash" sid="287641630354268">
+                    <behavior id="Flash" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="parado" pingpong="0" repeatcount="0" repeatto="0" sid="552953744446672" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_stand.png" />
+                    <frame duration="1" hotspotX="0.530303" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_stand.png" />
                 </animation>
                 <animation framecount="11" loop="1" name="andando" pingpong="0" repeatcount="0" repeatto="0" sid="652102908220499" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk01.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk02.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk03.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk04.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk05.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk06.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk07.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk08.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk09.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk10.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk11.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk01.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk02.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk03.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk04.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk05.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk06.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk07.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk08.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk09.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk10.png" />
+                    <frame duration="1" hotspotX="0.527778" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_walk\p1_walk11.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="pulando" pingpong="0" repeatcount="0" repeatto="0" sid="411997855101274" speed="0">
-                    <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_jump.png" />
+                    <frame duration="1" hotspotX="0.537313" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_jump.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="0" repeatto="0" sid="871678848119882" speed="0">
-                    <frame duration="1" hotspotX="0.507246" hotspotY="0.5" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_hurt.png" />
+                    <frame duration="1" hotspotX="0.536232" hotspotY="1" original-source="D:\GitKleber\curso_gratuito_construct2\Artes\base pack\Player\p1_hurt.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -220,6 +225,65 @@
                             <point x="0.5" y="0.962963" />
                             <point x="0.0555556" y="0.851852" />
                             <point x="0.0138889" y="0.481481" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo1" sid="958626166533001">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="562768876437957">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="435540231715433">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="acao" pingpong="0" repeatcount="0" repeatto="0" sid="874792518411881" speed="0">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\blockerSad.png" />
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\blockerMad.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo2" sid="428158831403915">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="632069702958546">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="107403154806655">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="143023819842404">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="836294450376436" speed="8">
+                    <frame duration="1" hotspotX="0.486111" hotspotY="0.0277778" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\flyFly1.png">
+                        <collision-poly>
+                            <point x="0.222222" y="0.444444" />
+                            <point x="0.5" y="0" />
+                            <point x="0.791667" y="0.416667" />
+                            <point x="0.888889" y="0.5" />
+                            <point x="0.944444" y="0.888889" />
+                            <point x="0.5" y="0.861111" />
+                            <point x="0.0555556" y="0.888889" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.48" hotspotY="0.0322581" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\flyFly2.png">
+                        <collision-poly>
+                            <point x="0.16" y="0.387097" />
+                            <point x="0.493333" y="0" />
+                            <point x="0.813333" y="0.451613" />
+                            <point x="0.973333" y="0.483871" />
+                            <point x="0.946667" y="0.870968" />
+                            <point x="0.493333" y="1" />
+                            <point x="0.0666667" y="0.83871" />
+                            <point x="0.0133333" y="0.483871" />
                         </collision-poly>
                     </frame>
                 </animation>

@@ -139,18 +139,109 @@
         <event-block sid="624202462142286">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="587431252895566" type="heroi">
-                    <param id="0" name="Object">inimigo</param>
+                    <param id="0" name="Object">inimigo1</param>
                 </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="879367367247947" type="animation" />
             </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="467699707857723" type="System">
-                    <param id="0" name="Variable">life</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="137475561661905" type="coracao">
-                    <param id="0" name="Frame number">life</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="286541461614978">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="784694735101014" type="heroi">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">inimigo1.Y+10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="566755728591225" type="inimigo1">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="884353474746505" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="979531290247991" type="inimigo1" />
+                    </actions>
+                </event-block>
+                <event-block sid="876654231711158">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="937919870793656" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="467699707857723" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="137475561661905" type="coracao">
+                            <param id="0" name="Frame number">life</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="260648464670518" type="animation">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="289375853862891" type="heroi">
+                            <param id="0" name="X">heroi.X-50</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="520697450427959">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="500010013856720" type="heroi">
+                    <param id="0" name="Object">inimigo2</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="478285990509581" type="animation" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="408561559492866">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="850563018850400" type="heroi">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">inimigo2.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="277032966072896" type="inimigo2">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="139713741404007" type="inimigo2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="948357555527499" type="inimigo2">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="903689548554301" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="526436433712672" type="inimigo2" />
+                    </actions>
+                </event-block>
+                <event-block sid="968358751811493">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="933942812711883" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="144761094123561" type="System">
+                            <param id="0" name="Variable">life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="934067150020968" type="coracao">
+                            <param id="0" name="Frame number">life</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="251629158595471" type="animation">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="678970488514724">
             <conditions>
@@ -173,6 +264,51 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="764036389978880">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="839051276385424" type="System">
+                    <param id="0" name="Interval (seconds)">random(1,3)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="230445744807080" type="inimigo1">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="335659610091577">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="675548737697772" type="inimigo1" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="333688278982465" type="inimigo1">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="107670570062511">
+            <conditions>
+                <condition id="-22" name="Else" sid="714344560659018" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="265070520483265" type="inimigo1">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752629842794491">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="523253139717300" type="inimigo2" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="192767615928292" type="inimigo2">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="308441175932869" type="inimigo2">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
