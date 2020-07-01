@@ -199,7 +199,10 @@
         <object-type name="base" sid="178612090651394">
             <plugin id="TiledBg" />
             <behaviors>
-                <behavior-type name="Solid" sid="783549636929758">
+                <behavior-type name="Jumpthru" sid="536510019496342">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="658973777178692">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
@@ -572,21 +575,12 @@
         <object-type name="flag" sid="100389360382864">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989936662491865" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRed.png">
-                        <collision-poly>
-                            <point x="0.0285714" y="0.0285714" />
-                            <point x="0.5" y="0.228571" />
-                            <point x="0.771429" y="0.228571" />
-                            <point x="0.657143" y="0.5" />
-                            <point x="0.571429" y="0.571429" />
-                            <point x="0.5" y="0.614286" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRed2.png" />
+                <animation framecount="1" loop="0" name="desativado" pingpong="0" repeatcount="0" repeatto="0" sid="989936662491865" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRedHanging.png" />
+                </animation>
+                <animation framecount="2" loop="1" name="ativado" pingpong="0" repeatcount="0" repeatto="0" sid="396937243461576" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRed.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRed2.png" />
                 </animation>
             </animation-folder>
         </object-type>
