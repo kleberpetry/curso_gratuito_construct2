@@ -10,6 +10,8 @@
     <unique-id>1tep2i4wjhzfi</unique-id>
     <saved-with-version>27700</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -203,7 +205,7 @@
             </behaviors>
             <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\grassHalfMid.png" />
         </object-type>
-        <object-type name="Sprite" sid="979202870495891">
+        <object-type name="ponte" sid="979202870495891">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Sine" sid="780132147384707">
@@ -289,6 +291,403 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="inimigo3" sid="730886805693758">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="322787901680643">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="andando" pingpong="0" repeatcount="0" repeatto="0" sid="101404883099654" speed="4">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.516129" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\snailWalk1.png" />
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.516129" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\snailWalk2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="morto" pingpong="0" repeatcount="1" repeatto="0" sid="180354330210027" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\snailShell_upsidedown.png">
+                        <collision-poly>
+                            <point x="0.0681818" y="0.1" />
+                            <point x="0.5" y="0" />
+                            <point x="0.931818" y="0.1" />
+                            <point x="0.977273" y="0.5" />
+                            <point x="0.840909" y="0.766667" />
+                            <point x="0.5" y="0.966667" />
+                            <point x="0.159091" y="0.766667" />
+                            <point x="0.0454545" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo4" sid="851237505792975">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="723625118896490">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="andando" pingpong="0" repeatcount="0" repeatto="0" sid="330529383356851" speed="8">
+                    <frame duration="1" hotspotX="0.46" hotspotY="0.892857" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\slimeWalk1.png" />
+                    <frame duration="1" hotspotX="0.45098" hotspotY="0.884615" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\slimeWalk2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="morto" pingpong="0" repeatcount="1" repeatto="0" sid="491403415411150" speed="5">
+                    <frame duration="1" hotspotX="0.491525" hotspotY="1.08333" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\slimeDead.png">
+                        <collision-poly>
+                            <point x="0.118644" y="0.583333" />
+                            <point x="0.491525" y="0" />
+                            <point x="0.864407" y="0.666667" />
+                            <point x="0.847458" y="0.5" />
+                            <point x="0.491525" y="1" />
+                            <point x="0.118644" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo5" sid="299278425563679">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="626357106031570">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528809776836024" speed="5">
+                    <frame duration="1" hotspotX="0.458333" hotspotY="0.993151" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\pokerMad.png">
+                        <image-point name="respaw" x="0.5" y="0.287671" />
+                        <collision-poly>
+                            <point x="0.145833" y="0.0479452" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854167" y="0.0479452" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fire" sid="139641115277871">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="244056312452545">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="910583323195726" speed="6">
+                    <frame duration="1" hotspotX="0.541667" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\fireball.png">
+                        <collision-poly>
+                            <point x="0.208333" y="0.192308" />
+                            <point x="0.541667" y="0.0384615" />
+                            <point x="0.875" y="0.192308" />
+                            <point x="0.791667" y="0.5" />
+                            <point x="0.875" y="0.807692" />
+                            <point x="0.541667" y="0.961538" />
+                            <point x="0.166667" y="0.846154" />
+                            <point x="0.0416667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.541667">
+                        <collision-poly>
+                            <point x="0.807692" y="0.208333" />
+                            <point x="0.961538" y="0.541667" />
+                            <point x="0.807692" y="0.875" />
+                            <point x="0.5" y="0.791667" />
+                            <point x="0.192308" y="0.875" />
+                            <point x="0.038462" y="0.541667" />
+                            <point x="0.153846" y="0.166667" />
+                            <point x="0.5" y="0.0416667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.458333" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.791667" y="0.807692" />
+                            <point x="0.458333" y="0.961538" />
+                            <point x="0.125" y="0.807692" />
+                            <point x="0.208333" y="0.5" />
+                            <point x="0.125" y="0.192308" />
+                            <point x="0.458333" y="0.038462" />
+                            <point x="0.833333" y="0.153846" />
+                            <point x="0.958333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.458333">
+                        <collision-poly>
+                            <point x="0.192308" y="0.791667" />
+                            <point x="0.0384615" y="0.458333" />
+                            <point x="0.192308" y="0.125" />
+                            <point x="0.5" y="0.208333" />
+                            <point x="0.807692" y="0.125" />
+                            <point x="0.961538" y="0.458333" />
+                            <point x="0.846154" y="0.833333" />
+                            <point x="0.5" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="respawnfogo" sid="274648464033190">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="219905365124417">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713287656709891" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="estrela" sid="806471391202385">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643458693845084" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\star.png">
+                        <collision-poly>
+                            <point x="0.4" y="0.4" />
+                            <point x="0.5" y="0.285714" />
+                            <point x="0.6" y="0.4" />
+                            <point x="0.7" y="0.5" />
+                            <point x="0.657143" y="0.657143" />
+                            <point x="0.5" y="0.685714" />
+                            <point x="0.342857" y="0.657143" />
+                            <point x="0.3" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="184573490030275">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Function" sid="589206060873116">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="portabaixo" sid="200953493220062">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="684602920525649" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\door_closedMid.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="portacima" sid="352244820371717">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842283456993234" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\door_closedTop.png">
+                        <collision-poly>
+                            <point x="0.428571" y="0.428571" />
+                            <point x="0.571429" y="0.428571" />
+                            <point x="0.828571" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.171429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fechadura" sid="161453773770478">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="311203522371598" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\lock_blue.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.0285714" />
+                            <point x="0.5" y="0" />
+                            <point x="0.971429" y="0.0285714" />
+                            <point x="1" y="0.5" />
+                            <point x="0.971429" y="0.971429" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0285714" y="0.971429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\lock_green.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="botao" sid="776644963356840">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151312335500853" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\buttonRed.png">
+                        <collision-poly>
+                            <point x="0.371429" y="0.371429" />
+                            <point x="0.5" y="0.342857" />
+                            <point x="0.628571" y="0.371429" />
+                            <point x="0.785714" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.214286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\buttonRed_pressed.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="chave" sid="814546164618281">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="725988150446567" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\keyYellow.png">
+                        <collision-poly>
+                            <point x="0.214286" y="0.214286" />
+                            <point x="0.5" y="0.385714" />
+                            <point x="0.614286" y="0.385714" />
+                            <point x="0.914286" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.528571" />
+                            <point x="0.285714" y="0.714286" />
+                            <point x="0.0714286" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="moeda" sid="499138623354636">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271505692210794" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\coinGold.png">
+                        <collision-poly>
+                            <point x="0.328571" y="0.328571" />
+                            <point x="0.5" y="0.271429" />
+                            <point x="0.671429" y="0.328571" />
+                            <point x="0.742857" y="0.5" />
+                            <point x="0.685714" y="0.685714" />
+                            <point x="0.5" y="0.757143" />
+                            <point x="0.314286" y="0.685714" />
+                            <point x="0.257143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="flag" sid="100389360382864">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989936662491865" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRed.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.0285714" />
+                            <point x="0.5" y="0.228571" />
+                            <point x="0.771429" y="0.228571" />
+                            <point x="0.657143" y="0.5" />
+                            <point x="0.571429" y="0.571429" />
+                            <point x="0.5" y="0.614286" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRed2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRedHanging.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="joia" sid="776703067902012">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261364298853391" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\gemYellow.png">
+                        <collision-poly>
+                            <point x="0.342857" y="0.342857" />
+                            <point x="0.5" y="0.328571" />
+                            <point x="0.657143" y="0.342857" />
+                            <point x="0.742857" y="0.5" />
+                            <point x="0.5" y="0.671429" />
+                            <point x="0.257143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fundo" sid="822311473071827">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\background.png" />
+        </object-type>
+        <object-type name="keyhave" sid="468622081783056">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156660097892659" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\HUD\hud_keyYellow_disabled.png">
+                        <collision-poly>
+                            <point x="0.272727" y="0.3" />
+                            <point x="0.5" y="0.2" />
+                            <point x="0.886364" y="0.125" />
+                            <point x="0.886364" y="0.5" />
+                            <point x="0.613636" y="0.575" />
+                            <point x="0.5" y="0.95" />
+                            <point x="0.113636" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\HUD\hud_keyYellow.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gameover" sid="990050416824638">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="820946254360681" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502164" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\mobile pack\gameover-panel.png">
+                        <collision-poly>
+                            <point x="0.148936" y="0.148936" />
+                            <point x="0.489362" y="0" />
+                            <point x="0.851064" y="0.148936" />
+                            <point x="1" y="0.489362" />
+                            <point x="0.851064" y="0.851064" />
+                            <point x="0.489362" y="1" />
+                            <point x="0.148936" y="0.851064" />
+                            <point x="0" y="0.489362" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sim" sid="555792007833157">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="152769988203313" speed="5">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.507042" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\mobile pack\game-over-continue.png">
+                        <collision-poly>
+                            <point x="0.15942" y="0.15493" />
+                            <point x="0.492754" y="0" />
+                            <point x="0.84058" y="0.15493" />
+                            <point x="0.985507" y="0.492958" />
+                            <point x="0.84058" y="0.84507" />
+                            <point x="0.492754" y="0.957747" />
+                            <point x="0.173913" y="0.830986" />
+                            <point x="0.0144928" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="nao" sid="357985350130448">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="292160897354117" speed="5">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.507042" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\mobile pack\game-over-back.png">
+                        <collision-poly>
+                            <point x="0.15942" y="0.15493" />
+                            <point x="0.492754" y="0" />
+                            <point x="0.84058" y="0.15493" />
+                            <point x="0.985507" y="0.492958" />
+                            <point x="0.84058" y="0.84507" />
+                            <point x="0.492754" y="0.957747" />
+                            <point x="0.173913" y="0.830986" />
+                            <point x="0.0144928" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -304,9 +703,26 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="29">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="30" />
     </global-instances>
     <sounds-folder />
-    <music-folder />
+    <music-folder>
+        <file name="star.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
