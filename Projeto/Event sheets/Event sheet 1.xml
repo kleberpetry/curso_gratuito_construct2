@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="chave" sid="879829246377034" static="0" type="number">0</variable>
+        <variable constant="0" name="save" sid="763296793897797" static="0" type="number">0</variable>
         <variable constant="0" name="life" sid="171935612113171" static="0" type="number">3</variable>
         <event-block sid="713381774298430">
             <conditions>
@@ -29,6 +31,23 @@
                     <param id="1" name="Mode">0</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="192260799745415">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="480519877371256" type="System">
+                            <param id="0" name="Variable">save</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="790258609493415" type="heroi">
+                            <param id="0" name="X">flag.X</param>
+                            <param id="1" name="Y">flag.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="120274217873129">
             <conditions>
@@ -173,17 +192,9 @@
                         <condition id="-22" name="Else" sid="937919870793656" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-11" name="Subtract from" sid="467699707857723" type="System">
-                            <param id="0" name="Variable">life</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="137475561661905" type="coracao">
-                            <param id="0" name="Frame number">life</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="260648464670518" type="animation">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.5</param>
+                        <action id="0" name="Call function" sid="133546456568498" type="Function">
+                            <param id="0" name="Name">&quot;perdevida&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-1" name="Set X" sid="289375853862891" type="heroi">
                             <param id="0" name="X">heroi.X-50</param>
@@ -231,17 +242,9 @@
                         <condition id="-22" name="Else" sid="933942812711883" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-11" name="Subtract from" sid="144761094123561" type="System">
-                            <param id="0" name="Variable">life</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="934067150020968" type="coracao">
-                            <param id="0" name="Frame number">life</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="251629158595471" type="animation">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.5</param>
+                        <action id="0" name="Call function" sid="472867351945285" type="Function">
+                            <param id="0" name="Name">&quot;perdevida&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -374,17 +377,9 @@
                         <condition id="-22" name="Else" sid="218338278780058" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-11" name="Subtract from" sid="253140159534716" type="System">
-                            <param id="0" name="Variable">life</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="822226980864322" type="coracao">
-                            <param id="0" name="Frame number">life</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="198070554703522" type="animation">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.5</param>
+                        <action id="0" name="Call function" sid="980370981019330" type="Function">
+                            <param id="0" name="Name">&quot;perdevida&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -517,7 +512,7 @@
                         <condition id="-22" name="Else" sid="994942269517580" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="896576277329032" type="Function">
+                        <action id="0" name="Call function" sid="195606441552790" type="Function">
                             <param id="0" name="Name">&quot;perdevida&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
@@ -525,26 +520,140 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="922852024046669">
+        <event-block sid="561279067397018">
             <conditions>
-                <condition id="0" name="On function" sid="840328455841140" type="Function">
+                <condition id="0" name="On collision with another object" sid="703749244183324" type="heroi">
+                    <param id="0" name="Object">flag</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="964800800697578" type="flag">
+                    <param id="0" name="Animation">&quot;ativado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="171210256559986" type="System">
+                    <param id="0" name="Variable">save</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="886318181000523">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="732639896160044" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="215562016490870">
+            <conditions>
+                <condition id="0" name="On function" sid="148321532446807" type="Function">
                     <param id="0" name="Name">&quot;perdevida&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="473931116060426" type="System">
+                <action id="-11" name="Subtract from" sid="111068890119901" type="System">
                     <param id="0" name="Variable">life</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="5" name="Set frame" sid="889412561344579" type="coracao">
+                <action id="5" name="Set frame" sid="262033602744368" type="coracao">
                     <param id="0" name="Frame number">life</param>
                 </action>
-                <action behavior="Flash" id="0" name="Flash" sid="713113988109456" type="animation">
+                <action behavior="Flash" id="0" name="Flash" sid="204785540230308" type="animation">
                     <param id="0" name="&apos;On&apos; time">0.1</param>
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.5</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="532069633468182">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="732804252123885" type="heroi">
+                    <param id="0" name="Object">fire</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="978296075864379" type="Function">
+                    <param id="0" name="Name">&quot;perdevida&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="201035283354404">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="333079731895253" type="heroi">
+                    <param id="0" name="Object">botao</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="487511941803727">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="148664819869479" type="heroi">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">botao.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="367394474509064" type="botao">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="323496471216348" type="chave">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="330186379324964" type="chave">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="626563180280455">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="163571247172368" type="heroi">
+                    <param id="0" name="Object">chave</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="928289880284273" type="keyhave">
+                    <param id="0" name="X">1200</param>
+                    <param id="1" name="Y">50</param>
+                </action>
+                <action id="-9" name="Destroy" sid="783679922198839" type="chave" />
+                <action id="-9" name="Set value" sid="445557253421323" type="System">
+                    <param id="0" name="Variable">chave</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="883001110514498">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="725414709600162" type="heroi">
+                    <param id="0" name="Object">fechadura</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="387370347412628">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="345148599039045" type="System">
+                            <param id="0" name="Variable">chave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="236759241781150" type="portabaixo">
+                            <param id="0" name="Animation">&quot;aberto&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="619953853492256" type="portacima">
+                            <param id="0" name="Animation">&quot;aberto&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

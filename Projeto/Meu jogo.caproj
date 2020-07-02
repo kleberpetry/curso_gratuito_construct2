@@ -473,16 +473,31 @@
         <object-type name="portabaixo" sid="200953493220062">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="684602920525649" speed="5">
+                <animation framecount="1" loop="0" name="fechado" pingpong="0" repeatcount="1" repeatto="0" sid="684602920525649" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\door_closedMid.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="aberto" pingpong="0" repeatcount="1" repeatto="0" sid="462840380167051" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\door_openMid.png" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="portacima" sid="352244820371717">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842283456993234" speed="5">
+                <animation framecount="1" loop="0" name="fechado" pingpong="0" repeatcount="1" repeatto="0" sid="842283456993234" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\door_closedTop.png">
+                        <collision-poly>
+                            <point x="0.428571" y="0.428571" />
+                            <point x="0.571429" y="0.428571" />
+                            <point x="0.828571" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.171429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="aberto" pingpong="0" repeatcount="1" repeatto="0" sid="114074913845375" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\door_openTop.png">
                         <collision-poly>
                             <point x="0.428571" y="0.428571" />
                             <point x="0.571429" y="0.428571" />
@@ -498,7 +513,7 @@
         <object-type name="fechadura" sid="161453773770478">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="311203522371598" speed="5">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="311203522371598" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\lock_blue.png">
                         <collision-poly>
                             <point x="0.0285714" y="0.0285714" />
@@ -518,8 +533,8 @@
         <object-type name="botao" sid="776644963356840">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="151312335500853" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\buttonRed.png">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="151312335500853" speed="0">
+                    <frame duration="1" hotspotX="0.485714" hotspotY="0.785714" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\buttonRed.png">
                         <collision-poly>
                             <point x="0.371429" y="0.371429" />
                             <point x="0.5" y="0.342857" />
@@ -530,7 +545,7 @@
                             <point x="0.214286" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\buttonRed_pressed.png" />
+                    <frame duration="1" hotspotX="0.485714" hotspotY="0.785714" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\buttonRed_pressed.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -576,7 +591,16 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="desativado" pingpong="0" repeatcount="0" repeatto="0" sid="989936662491865" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRedHanging.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRedHanging.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.0285714" />
+                            <point x="0.357143" y="0.642857" />
+                            <point x="0.342857" y="0.5" />
+                            <point x="0.342857" y="0.342857" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="ativado" pingpong="0" repeatcount="0" repeatto="0" sid="396937243461576" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\flagRed.png" />
@@ -608,7 +632,8 @@
         <object-type name="keyhave" sid="468622081783056">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156660097892659" speed="5">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="156660097892659" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\HUD\hud_keyYellow.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\HUD\hud_keyYellow_disabled.png">
                         <collision-poly>
                             <point x="0.272727" y="0.3" />
@@ -621,7 +646,6 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\HUD\hud_keyYellow.png" />
                 </animation>
             </animation-folder>
         </object-type>
