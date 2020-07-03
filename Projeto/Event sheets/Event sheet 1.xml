@@ -3,9 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="moeda" sid="583111792961262" static="0" type="number">0</variable>
+        <variable constant="0" name="vida" sid="371189208595573" static="0" type="number">3</variable>
         <variable constant="0" name="chave" sid="879829246377034" static="0" type="number">0</variable>
         <variable constant="0" name="save" sid="763296793897797" static="0" type="number">0</variable>
-        <variable constant="0" name="life" sid="171935612113171" static="0" type="number">3</variable>
+        <variable constant="0" name="coracao" sid="171935612113171" static="0" type="number">3</variable>
         <event-block sid="713381774298430">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="808402510749614" type="System" />
@@ -20,11 +22,14 @@
                     <param id="1" name="Mode">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="611602075127033" type="System">
-                    <param id="0" name="Variable">life</param>
+                    <param id="0" name="Variable">coracao</param>
                     <param id="1" name="Value">3</param>
                 </action>
                 <action id="5" name="Set frame" sid="394326759605635" type="coracao">
-                    <param id="0" name="Frame number">life</param>
+                    <param id="0" name="Frame number">coracao</param>
+                </action>
+                <action id="5" name="Set frame" sid="926099310717476" type="number">
+                    <param id="0" name="Frame number">vida</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="996864160311953" type="respawnfogo">
                     <param id="0" name="Pin to">inimigo5</param>
@@ -256,18 +261,46 @@
                     <param id="0" name="Interval (seconds)">1.0</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Set text" sid="748830393514090" type="placar">
+                    <param id="0" name="Text">moeda</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="305849811067520">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="534884876119402" type="System">
-                            <param id="0" name="Variable">life</param>
+                            <param id="0" name="Variable">coracao</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-26" name="Restart layout" sid="170672150005673" type="System" />
+                        <action id="-11" name="Subtract from" sid="808266376115341" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="997580789717829">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="958552499398794" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="144451340513312" type="System" />
+                        <action id="-9" name="Set value" sid="257875452553418" type="System">
+                            <param id="0" name="Variable">save</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="803858071686385" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -445,6 +478,7 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Destroy" sid="258421373183919" type="estrela" />
                 <action behavior="Flash" id="0" name="Flash" sid="608538835283368" type="animation">
                     <param id="0" name="&apos;On&apos; time">0.1</param>
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
@@ -453,7 +487,7 @@
                 <action id="0" name="Play" sid="935051052239164" type="Audio">
                     <param id="0" name="Audio file">star</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-15</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="688495199235758" type="System">
@@ -553,11 +587,11 @@
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="111068890119901" type="System">
-                    <param id="0" name="Variable">life</param>
+                    <param id="0" name="Variable">coracao</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="5" name="Set frame" sid="262033602744368" type="coracao">
-                    <param id="0" name="Frame number">life</param>
+                    <param id="0" name="Frame number">coracao</param>
                 </action>
                 <action behavior="Flash" id="0" name="Flash" sid="204785540230308" type="animation">
                     <param id="0" name="&apos;On&apos; time">0.1</param>
@@ -651,9 +685,25 @@
                             <param id="0" name="Animation">&quot;aberto&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="930168630814448" type="keyhave">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="568066684050659">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="774724302096844" type="heroi">
+                    <param id="0" name="Object">moeda</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="690537327907811" type="System">
+                    <param id="0" name="Variable">moeda</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
