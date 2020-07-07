@@ -1726,8 +1726,8 @@
                         <width>70</width>
                         <height>70</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.95714283</hotspotY>
+                        <hotspotX>0.485714287</hotspotX>
+                        <hotspotY>0.985714257</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

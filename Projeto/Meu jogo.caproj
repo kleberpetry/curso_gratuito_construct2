@@ -38,6 +38,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Layout 1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -822,15 +823,8 @@
         </global-instance>
         <global-instance type="Function" uid="30" />
     </global-instances>
-    <sounds-folder>
-        <file name="star.ogg" />
-        <file name="Super Mario coin sound.m4a" />
-        <file name="Super Mario coin sound.ogg" />
-    </sounds-folder>
-    <music-folder>
-        <file name="Monkeys Spinning Monkeys.m4a" />
-        <file name="Monkeys Spinning Monkeys.ogg" />
-    </music-folder>
+    <sounds-folder />
+    <music-folder />
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

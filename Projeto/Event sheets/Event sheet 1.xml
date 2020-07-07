@@ -37,12 +37,6 @@
                             <param id="0" name="Pin to">inimigo5</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action id="0" name="Play" sid="980000482106432" type="Audio">
-                            <param id="0" name="Audio file">Monkeys Spinning Monkeys</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-15</param>
-                            <param id="1" name="Tag (optional)">&quot;back&quot;</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="192260799745415">
@@ -111,31 +105,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="704065579497244" title="functions">
-            <sub-events>
-                <event-block sid="215562016490870">
-                    <conditions>
-                        <condition id="0" name="On function" sid="148321532446807" type="Function">
-                            <param id="0" name="Name">&quot;perdevida&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="111068890119901" type="System">
-                            <param id="0" name="Variable">coracao</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="262033602744368" type="coracao">
-                            <param id="0" name="Frame number">coracao</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="204785540230308" type="animation">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.5</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -372,7 +341,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="978296075864379" type="Function">
-                            <param id="0" name="Name">&quot;perdevida&quot;</param>
+                            <param id="0" name="Name">&quot;perdecoracao&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -428,7 +397,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="195606441552790" type="Function">
-                                    <param id="0" name="Name">&quot;perdevida&quot;</param>
+                                    <param id="0" name="Name">&quot;perdecoracao&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -486,7 +455,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="980370981019330" type="Function">
-                                    <param id="0" name="Name">&quot;perdevida&quot;</param>
+                                    <param id="0" name="Name">&quot;perdecoracao&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -533,7 +502,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="472867351945285" type="Function">
-                                    <param id="0" name="Name">&quot;perdevida&quot;</param>
+                                    <param id="0" name="Name">&quot;perdecoracao&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -574,7 +543,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="133546456568498" type="Function">
-                                    <param id="0" name="Name">&quot;perdevida&quot;</param>
+                                    <param id="0" name="Name">&quot;perdecoracao&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-1" name="Set X" sid="289375853862891" type="heroi">
@@ -588,6 +557,52 @@
         </event-group>
         <event-group description="" sid="320483605544638" title="itens e variados">
             <sub-events>
+                <event-block sid="443789073516328">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="446131670860912" type="Touch">
+                            <param id="0" name="Object">som</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="660807749853694" type="som">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="22" name="Set paused" sid="809088575204466" type="Audio">
+                            <param id="0" name="Tag">&quot;back&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="823411839467574" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="188546632694134" type="som">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="206776917657768">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="876590372331472" type="Touch">
+                            <param id="0" name="Object">som</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="775735559998195" type="som">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="22" name="Set paused" sid="530576856704501" type="Audio">
+                            <param id="0" name="Tag">&quot;back&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="784244702899293" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="329219766917169" type="som">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="307092270822548">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="877640889658763" type="heroi">
@@ -633,6 +648,10 @@
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="Y co-ordinate">caixajoia.Y</param>
                                 </condition>
+                                <condition id="-1" name="Compare X" sid="447077213940240" type="heroi">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">caixajoia.X-40</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="707220855023365" type="System">
@@ -660,12 +679,6 @@
                             <param id="1" name="Value">10</param>
                         </action>
                         <action id="-9" name="Destroy" sid="602899838044464" type="moeda" />
-                        <action id="0" name="Play" sid="240604314687569" type="Audio">
-                            <param id="0" name="Audio file">Super Mario coin sound</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="883001110514498">
@@ -777,17 +790,49 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">5.0</param>
                         </action>
-                        <action id="0" name="Play" sid="935051052239164" type="Audio">
-                            <param id="0" name="Audio file">star</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-15</param>
-                            <param id="1" name="Tag (optional)">&quot;star&quot;</param>
-                        </action>
                         <action id="-16" name="Wait" sid="688495199235758" type="System">
                             <param id="0" name="Seconds">5</param>
                         </action>
                         <action id="6" name="Stop" sid="592864096387228" type="Audio">
                             <param id="0" name="Tag">&quot;star&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="704065579497244" title="functions">
+            <sub-events>
+                <event-block sid="488239000479950">
+                    <conditions>
+                        <condition id="0" name="On function" sid="344091142200564" type="Function">
+                            <param id="0" name="Name">&quot;perdevida&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="405975311003208" type="System">
+                            <param id="0" name="Variable">coracao</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="215562016490870">
+                    <conditions>
+                        <condition id="0" name="On function" sid="148321532446807" type="Function">
+                            <param id="0" name="Name">&quot;perdecoracao&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="111068890119901" type="System">
+                            <param id="0" name="Variable">coracao</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="262033602744368" type="coracao">
+                            <param id="0" name="Frame number">coracao</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="204785540230308" type="animation">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.5</param>
                         </action>
                     </actions>
                 </event-block>
