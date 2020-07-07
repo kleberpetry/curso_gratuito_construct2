@@ -786,7 +786,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="935398629600943" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.957143" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\boxItem.png" />
+                    <frame duration="1" hotspotX="0.485714" hotspotY="0.985714" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\boxItem.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.957143" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\boxItem_disabled.png" />
                 </animation>
             </animation-folder>
@@ -827,7 +827,10 @@
         <file name="Super Mario coin sound.m4a" />
         <file name="Super Mario coin sound.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="Monkeys Spinning Monkeys.m4a" />
+        <file name="Monkeys Spinning Monkeys.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

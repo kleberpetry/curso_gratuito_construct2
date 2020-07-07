@@ -37,6 +37,12 @@
                             <param id="0" name="Pin to">inimigo5</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action id="0" name="Play" sid="980000482106432" type="Audio">
+                            <param id="0" name="Audio file">Monkeys Spinning Monkeys</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;back&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="192260799745415">
