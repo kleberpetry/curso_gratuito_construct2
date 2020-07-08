@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -748,14 +749,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="551388583538122">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="717138721804508" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="som" sid="989456060364866">
             <plugin id="Sprite" />
             <animation-folder>
@@ -824,6 +817,119 @@
                             <point x="0.492754" y="0.957747" />
                             <point x="0.173913" y="0.830986" />
                             <point x="0.0144928" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="trampolim" sid="854964071026508">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="337357291277250" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\springboardDown.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\springboardUp.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="espinhos" sid="275990490066529">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="977417344565669" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\spikes.png">
+                        <collision-poly>
+                            <point x="0.757143" y="0.757143" />
+                            <point x="0.5" y="0.528571" />
+                            <point x="0.242857" y="0.757143" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="891872572271409">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="peixe" sid="727276643796655">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="415987182926112" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\fishSwim1.png">
+                        <collision-poly>
+                            <point x="0.151515" y="0.238095" />
+                            <point x="0.5" y="0.119048" />
+                            <point x="0.727273" y="0.428571" />
+                            <point x="0.969697" y="0.5" />
+                            <point x="0.5" y="0.857143" />
+                            <point x="0.106061" y="0.833333" />
+                            <point x="0.0151515" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\fishSwim1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\fishSwim2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap" sid="110645839618711">
+            <plugin id="Tilemap" />
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="aguafundo" sid="785814822236487">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\liquidWater.png" />
+        </object-type>
+        <object-type name="aguatopo" sid="867936350244826">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\liquidWaterTop_mid.png" />
+        </object-type>
+        <object-type name="lavafundo" sid="543042134273040">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\liquidLava.png" />
+        </object-type>
+        <object-type name="lavatopo" sid="665902025968225">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\liquidLavaTop_mid.png" />
+        </object-type>
+        <object-type name="nuvens" sid="332844125467364">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356742149820231" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507042" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\cloud1.png">
+                        <collision-poly>
+                            <point x="0.179688" y="0.323944" />
+                            <point x="0.5" y="0" />
+                            <point x="0.789063" y="0.380282" />
+                            <point x="0.9375" y="0.492958" />
+                            <point x="0.945313" y="0.901408" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0546875" y="0.901408" />
+                            <point x="0.101563" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503876" hotspotY="0.507042" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\cloud2.png">
+                        <collision-poly>
+                            <point x="0.224806" y="0.408451" />
+                            <point x="0.496124" y="0" />
+                            <point x="0.782946" y="0.394366" />
+                            <point x="0.790698" y="0.492958" />
+                            <point x="0.945736" y="0.901408" />
+                            <point x="0.496124" y="1" />
+                            <point x="0.0542636" y="0.901408" />
+                            <point x="0.108527" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503876" hotspotY="0.507042" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Items\cloud3.png">
+                        <collision-poly>
+                            <point x="0.155039" y="0.28169" />
+                            <point x="0.496124" y="0" />
+                            <point x="0.875969" y="0.225352" />
+                            <point x="0.976744" y="0.492958" />
+                            <point x="0.945736" y="0.901408" />
+                            <point x="0.496124" y="1" />
+                            <point x="0.0542636" y="0.901408" />
+                            <point x="0.108527" y="0.492958" />
                         </collision-poly>
                     </frame>
                 </animation>
