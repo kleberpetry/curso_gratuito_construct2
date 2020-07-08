@@ -37,10 +37,6 @@
                         <action id="5" name="Set frame" sid="926099310717476" type="number">
                             <param id="0" name="Frame number">vida</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="996864160311953" type="respawnfogo">
-                            <param id="0" name="Pin to">inimigo5</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="397617938154243" type="sim">
                             <param id="0" name="Pin to">gameover</param>
                             <param id="1" name="Mode">0</param>
@@ -52,6 +48,10 @@
                         <action id="0" name="Call function" sid="735263804232171" type="Function">
                             <param id="0" name="Name">&quot;gameover&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="576304610931506" type="respawnfogo">
+                            <param id="0" name="Pin to">inimigo5</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -291,9 +291,7 @@
         <event-group description="" sid="185351318291672" title="inimigos">
             <sub-events>
                 <event-block sid="157354096232547">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="994740555989456" type="inimigo5" />
-                    </conditions>
+                    <conditions />
                     <actions />
                     <sub-events>
                         <event-block sid="776366745011132">
@@ -953,6 +951,99 @@
                 <action id="-12" name="Set group active" sid="604142489781760" type="System">
                     <param id="0" name="Group name">&quot;controles &amp; animacoes&quot;</param>
                     <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="349249742573826">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="819845973099891" type="System">
+                    <param id="0" name="Interval (seconds)">random(1,5)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="712235494623692" type="System">
+                    <param id="0" name="Object to create">fire</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">respawfogo1.X</param>
+                    <param id="3" name="Y">respawfogo1.Y</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="155570318472373" type="fire">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="123847795035106" type="fire">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="511362411458271">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="823454805407485" type="System">
+                    <param id="0" name="Interval (seconds)">random(1,5)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="705741000082255" type="System">
+                    <param id="0" name="Object to create">fire</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">respawfogo2.X</param>
+                    <param id="3" name="Y">respawfogo2.Y</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="360287657420758" type="fire">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="929473311950916" type="fire">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="688160754140466" type="fire">
+                    <param id="0" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="562207947024614">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="347668149224042" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="318514965024918">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="707302094217277" type="fire">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="348614612832614" type="fire">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="189926281782463" type="fire">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="590512511850050">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="281986416310977" type="heroi">
+                    <param id="0" name="Object">trampolim</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="116537829588346" type="trampolim">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="279439094435650" type="heroi">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="223761124372516" type="heroi">
+                    <param id="0" name="Jump strength">1100</param>
+                </action>
+                <action id="-16" name="Wait" sid="971162787833528" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="173282606407452" type="heroi">
+                    <param id="0" name="Jump strength">650</param>
                 </action>
             </actions>
         </event-block>

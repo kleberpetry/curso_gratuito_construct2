@@ -22,6 +22,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -70,14 +71,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="763984614506530" speed="5">
                     <frame duration="1" hotspotX="0.476" hotspotY="0.996" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="inimigo" sid="950575879379063">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="533930585056449" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -351,35 +344,14 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="inimigo5" sid="299278425563679">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="626357106031570">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528809776836024" speed="5">
-                    <frame duration="1" hotspotX="0.458333" hotspotY="0.993151" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\pokerMad.png">
-                        <image-point name="respaw" x="0.5" y="0.287671" />
-                        <collision-poly>
-                            <point x="0.145833" y="0.0479452" />
-                            <point x="0.5" y="0" />
-                            <point x="0.854167" y="0.0479452" />
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="fire" sid="139641115277871">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Bullet" sid="244056312452545">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="291835965215604">
+                    <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -853,6 +825,11 @@
         </object-type>
         <object-type name="peixe" sid="727276643796655">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="998652665704641">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="415987182926112" speed="7">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\fishSwim1.png">
@@ -878,18 +855,38 @@
         </object-type>
         <object-type name="aguafundo" sid="785814822236487">
             <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Sine" sid="895150712812380">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\liquidWater.png" />
         </object-type>
         <object-type name="aguatopo" sid="867936350244826">
             <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Sine" sid="753263435645970">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\liquidWaterTop_mid.png" />
         </object-type>
         <object-type name="lavafundo" sid="543042134273040">
             <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Sine" sid="526533691359675">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\liquidLava.png" />
         </object-type>
         <object-type name="lavatopo" sid="665902025968225">
             <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Sine" sid="956999249099197">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Tiles\liquidLavaTop_mid.png" />
         </object-type>
         <object-type name="nuvens" sid="332844125467364">
@@ -930,6 +927,55 @@
                             <point x="0.496124" y="1" />
                             <point x="0.0542636" y="0.901408" />
                             <point x="0.108527" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="respawfogo1" sid="805301661128649">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="122883384743380">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797320787119960" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="respawfogo2" sid="542933548931486">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="163788716076564">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="278668320427886" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo5" sid="802377934688845">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="950628176649735">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="340750934890633" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Documents\mestrado git\curso_gratuito_construct2\Artes\base pack\Enemies\pokerMad.png">
+                        <collision-poly>
+                            <point x="0.145833" y="0.0479452" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854167" y="0.0479452" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

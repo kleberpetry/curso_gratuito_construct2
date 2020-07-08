@@ -30,7 +30,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/heroi/" />
-        <folder expanded="1" path="animation-folder/inimigo/" />
         <folder expanded="1" path="animation-folder/animation/" />
         <folder expanded="1" path="animation-folder/esquerdo/" />
         <folder expanded="1" path="animation-folder/direito/" />
@@ -41,7 +40,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/inimigo2/" />
         <folder expanded="1" path="animation-folder/inimigo3/" />
         <folder expanded="1" path="animation-folder/inimigo4/" />
-        <folder expanded="1" path="animation-folder/inimigo5/" />
         <folder expanded="1" path="animation-folder/fire/" />
         <folder expanded="1" path="animation-folder/respawnfogo/" />
         <folder expanded="1" path="animation-folder/estrela/" />
@@ -68,5 +66,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/espinhos/" />
         <folder expanded="1" path="animation-folder/peixe/" />
         <folder expanded="1" path="animation-folder/nuvens/" />
+        <folder expanded="1" path="animation-folder/respawfogo1/" />
+        <folder expanded="1" path="animation-folder/respawfogo2/" />
+        <folder expanded="1" path="animation-folder/inimigo5/" />
     </folders-expanded>
 </c2uistate>
