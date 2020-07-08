@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>game_eventsheet</name>
     <events>
         <variable constant="0" name="moeda" sid="583111792961262" static="0" type="number">0</variable>
         <variable constant="0" name="vida" sid="371189208595573" static="0" type="number">3</variable>
@@ -23,6 +23,10 @@
                             <param id="0" name="Pin to">heroi</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="430973910325070" type="System">
+                            <param id="0" name="Variable">moeda</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-9" name="Set value" sid="611602075127033" type="System">
                             <param id="0" name="Variable">coracao</param>
                             <param id="1" name="Value">3</param>
@@ -36,6 +40,18 @@
                         <action behavior="Pin" id="0" name="Pin to object" sid="996864160311953" type="respawnfogo">
                             <param id="0" name="Pin to">inimigo5</param>
                             <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="397617938154243" type="sim">
+                            <param id="0" name="Pin to">gameover</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="870197281681231" type="nao">
+                            <param id="0" name="Pin to">gameover</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="735263804232171" type="Function">
+                            <param id="0" name="Name">&quot;gameover&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -56,11 +72,22 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="525132725537955">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="269609374938992" type="heroi">
+                            <param id="0" name="Object">quedamorte</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="394270640390548" type="Function">
+                            <param id="0" name="Name">&quot;perdevida&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="678970488514724">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="348819534880958" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
+                        <condition id="-1" name="Every tick" sid="348819534880958" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="748830393514090" type="placar">
@@ -89,18 +116,57 @@
                                 <condition id="-14" name="Compare variable" sid="958552499398794" type="System">
                                     <param id="0" name="Variable">vida</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-26" name="Restart layout" sid="144451340513312" type="System" />
-                                <action id="-9" name="Set value" sid="257875452553418" type="System">
+                                <action disabled="1" id="-26" name="Restart layout" sid="144451340513312" type="System" />
+                                <action disabled="1" id="-9" name="Set value" sid="257875452553418" type="System">
                                     <param id="0" name="Variable">save</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="803858071686385" type="System">
+                                <action disabled="1" id="-9" name="Set value" sid="803858071686385" type="System">
                                     <param id="0" name="Variable">vida</param>
                                     <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="982900000556145" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="781164919139135">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="611966632075929" type="gameover">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">330</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="809830683710652" type="gameover">
+                                            <param id="0" name="X">640</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="145327227652907" type="gameover">
+                                            <param id="0" name="Y">gameover.Y+30</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="196967845539794" type="System">
+                                            <param id="0" name="Group name">&quot;controles &amp; animacoes&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="832417993603732">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="115890995175058" type="heroi">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">740</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="760190863970028" type="Function">
+                                    <param id="0" name="Name">&quot;perdevida&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -838,5 +904,57 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="628626113995076">
+            <conditions>
+                <condition id="3" name="On touched object" sid="978439035092804" type="Touch">
+                    <param id="0" name="Object">sim</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="357612616486706" type="System" />
+                <action id="-13" name="Set time scale" sid="287849006196699" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="843484419000723" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="703263077776765">
+            <conditions>
+                <condition id="3" name="On touched object" sid="407970032980127" type="Touch">
+                    <param id="0" name="Object">nao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="744144361457519" type="System">
+                    <param id="0" name="Layout">principal</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="531430692415657" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="850074364083591" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="544234555567962">
+            <conditions>
+                <condition id="3" name="On touched object" sid="335411137658902" type="Touch">
+                    <param id="0" name="Object">comeca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="551386019018392" type="System">
+                    <param id="0" name="Layout">game</param>
+                </action>
+                <action id="-12" name="Set group active" sid="604142489781760" type="System">
+                    <param id="0" name="Group name">&quot;controles &amp; animacoes&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
