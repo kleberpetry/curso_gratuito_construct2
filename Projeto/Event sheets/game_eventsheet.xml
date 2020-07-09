@@ -291,7 +291,9 @@
         <event-group description="" sid="185351318291672" title="inimigos">
             <sub-events>
                 <event-block sid="157354096232547">
-                    <conditions />
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="620144880176372" type="inimigo5" />
+                    </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="776366745011132">
@@ -959,6 +961,7 @@
                 <condition id="-6" name="Every X seconds" sid="819845973099891" type="System">
                     <param id="0" name="Interval (seconds)">random(1,5)</param>
                 </condition>
+                <condition id="-3" name="Is on-screen" sid="233162837500460" type="respawfogo1" />
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="712235494623692" type="System">
@@ -973,6 +976,9 @@
                 <action behavior="Bullet" id="5" name="Set enabled" sid="123847795035106" type="fire">
                     <param id="0" name="State">1</param>
                 </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="282983181583982" type="fire">
+                    <param id="0" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="511362411458271">
@@ -980,6 +986,7 @@
                 <condition id="-6" name="Every X seconds" sid="823454805407485" type="System">
                     <param id="0" name="Interval (seconds)">random(1,5)</param>
                 </condition>
+                <condition id="-3" name="Is on-screen" sid="648143931590097" type="respawfogo2" />
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="705741000082255" type="System">
@@ -1044,6 +1051,25 @@
                 </action>
                 <action behavior="Platform" id="4" name="Set jump strength" sid="173282606407452" type="heroi">
                     <param id="0" name="Jump strength">650</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="346918457029470">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="532404250873842" type="System">
+                    <param id="0" name="Interval (seconds)">random(1, 20)</param>
+                </condition>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="157023708266464" type="nuvens" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="867161708081753" type="nuvens">
+                    <param id="0" name="Frame number">random(1,3)</param>
+                </action>
+                <action id="-3" name="Create object" sid="289043719236545" type="System">
+                    <param id="0" name="Object to create">nuvens</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">-30</param>
+                    <param id="3" name="Y">random(0,300)</param>
                 </action>
             </actions>
         </event-block>
