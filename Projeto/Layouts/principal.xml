@@ -59,8 +59,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>394</x>
-                        <y>285</y>
+                        <x>503</x>
+                        <y>438</y>
                         <z>0</z>
                         <width>228.831817627</width>
                         <height>228.831817627</height>
@@ -81,14 +81,41 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>771</x>
-                        <y>300</y>
+                        <x>769</x>
+                        <y>445</y>
                         <z>0</z>
                         <width>220.42388916</width>
                         <height>226.812988281</height>
                         <depth>0</depth>
                         <hotspotX>0.507246375</hotspotX>
                         <hotspotY>0.507042229</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="178">
+                    <properties>
+                        <text>return to minha casa</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Broadway,-64,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>260</x>
+                        <y>163</y>
+                        <z>0</z>
+                        <width>796</width>
+                        <height>87</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

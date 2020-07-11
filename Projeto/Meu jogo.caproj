@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -1011,6 +1012,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text" sid="489236258884874">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1043,7 +1047,21 @@
         </global-instance>
         <global-instance type="Function" uid="30" />
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="buy.ogg" />
+        <file name="finalwave.ogg" />
+        <file name="gameover.ogg" />
+        <file name="hit-1.ogg" />
+        <file name="Hitting Sound Effects.ogg" />
+        <file name="impact-2.ogg" />
+        <file name="impact.ogg" />
+        <file name="mario stage clear - sound effect.ogg" />
+        <file name="Metal Bang-SoundBible.com-672025076.ogg" />
+        <file name="Monkeys Spinning Monkeys.ogg" />
+        <file name="spawn.ogg" />
+        <file name="success.ogg" />
+        <file name="Super Mario coin sound.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
